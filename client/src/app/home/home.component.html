@@ -1,0 +1,29 @@
+﻿<h1>Hi{{currentUser ? ' ' + currentUser.firstName : ''}}!</h1>
+<div class="form-container">
+    <form class="form-container" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-select required name="size" [(ngModel)]="size" placeholder="Board Size">
+                <mat-option [value]="6">6x6</mat-option>
+                <mat-option selected [value]="8">8x8</mat-option>
+                <mat-option [value]="10">10x10</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select required name="flips" [(ngModel)]="flips" placeholder="Difficulty">
+                <mat-option selected [value]="7">easy</mat-option>
+                <mat-option [value]="13">medium</mat-option>
+                <mat-option [value]="19">hard</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-raised-button type="submit">Submit</button>
+    </form>
+</div>
+<app-gameboard [board]="this.board"></app-gameboard>
+<!-- <h3>All registered users:</h3>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li>
+</ul> -->
+<p *ngIf="currentUser"><a [routerLink]="['/login']">Logout</a></p>

@@ -1,0 +1,13 @@
+﻿<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened>
+        <mat-nav-list color="primary">
+            <a mat-list-item routerLink='/'>Home</a>
+            <a mat-list-item routerLink='/login'>Login</a>
+            <a mat-list-item routerLink='/register'>Register</a>
+            <a mat-list-item routerLink='/create'>Create Board</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,10 @@
+<div class="gameboard">
+  <div class="gameboard-row" *ngFor="let row of this.data" fxLayout="column" >
+    <button mat-raised-button class="gameboard-tile" *ngFor="let tile of row" [style.background-color]="tileColor(tile)" (click)="this.flipTile(tile)"></button>
+  </div>
+  <!-- <mat-grid-list cols="{{size}}" rowHeight="fit">
+    <mat-grid-tile *ngFor="let row of this.data">
+      <button mat-raised-button class="gameboard-tile" *ngFor="let tile of row"  (click)="this.flipTile(tile)"></button>
+    </mat-grid-tile>
+  </mat-grid-list> -->
+</div>

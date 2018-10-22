@@ -1,0 +1,23 @@
+.gameboard{
+    display: flex;
+}
+
+.gameboard-row{
+    /* display: flex; */
+    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap
+}
+.gameboard-tile{
+    background-color: black;
+    flex: 1 0 auto;
+    height: auto;
+    width: 15%;
+    margin: 0;
+}
+
+.gameboard-tile:before {
+    content:'';
+    float:left;
+    padding-top:100%;
+}
